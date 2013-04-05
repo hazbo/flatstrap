@@ -1,0 +1,43 @@
+/*	------------------------------------------------------
+
+	Config.less
+	
+	The site config LESS file.
+	
+	Written by Joey Emery.
+	
+------------------------------------------------------ */
+
+/* --- Variables --- */
+
+/*
+-	Colours
+*/
+
+@colour_bg_base:		#fff;
+@colour_font_base: 		#000;
+	
+/*
+-	Fonts
+*/
+
+@font_base:				Helvetica, sans-serif, arial;
+@font_heading:			Helvetica;
+
+/* --- Mixins --- */
+
+.box_sizing(@params) {
+	-moz-box-sizing: @params; -webkit-box-sizing: @params; box-sizing: @params;
+}
+
+.border_radius(@params) {
+	-moz-border-radius: @params; -webkit-border-radius: @params; border-radius: @params;
+}
+
+.box_shadow(@params) {
+	-moz-box-shadow: @params; -webkit-box-shadow: @params; box-shadow: @params;
+}
+
+.twoway_gradient(@color_1: #fff, @color_2: #eee) {
+   background-color: @color_2;  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@color_1), to(@color_2)); background-image: -webkit-linear-gradient(@color_1, @color_2); background-image: -moz-linear-gradient(@color_1, @color_2); background-image: -o-linear-gradient(@color_1, @color_2); background-image: linear-gradient(@color_1, @color_2);
+}

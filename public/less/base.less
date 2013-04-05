@@ -2,11 +2,13 @@
 
 	Base.less
 	
-	The master less file.
+	The master LESS file.
 	
 	Written by Joey Emery.
 	
 ------------------------------------------------------ */
+
+/* --- Dependencies --- */
 
 /*
 -	Load in the configuration file, which deals with
@@ -31,15 +33,25 @@
 @import 'fonts';
 
 /*
--	Load in the typography file, which prestyles major
--	typographical elements for us.
+-	Load in the typography file, which deals with
+-	prestyling any textual elements.
 */
 
 @import 'typography';
 
 /*
--	Load in the grid file, which deals with our entire
--	griding system.
+-	Load in the grid file, which powers
+-	our entire grid system.
 */
 
 @import 'grid';
+
+/* --- Generic Styles --- */
+
+body {
+	background:		@colour_bg_base;
+	font-family:	@font_base;
+	color:			@colour_font_base;
+	font-size:		16px;
+	line-height:	26px;
+}
