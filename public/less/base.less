@@ -48,10 +48,103 @@
 
 /* --- Generic Styles --- */
 
+/*
+-	Basic styles for some elements to set up the
+-	website nicely.
+*/
+
 body {
 	background:		@colour_bg_base;
 	font-family:	@font_base;
 	color:			@colour_font_base;
+	padding-top:	70px;
 	font-size:		16px;
 	line-height:	26px;
+	
+	a {
+		color:		@colour_font_anchor;
+		
+		&:hover {
+			color:	darken(@colour_font_anchor, 10%);
+		}
+	}
+	
+	.container {
+		.clearfix;
+		width:		@dim_width_container;
+		margin:		0 auto;
+	}
+}
+
+/* --- Navigation --- */
+
+/*
+-	Navigational bar, which sits statically
+-	at the top of the website.
+*/
+
+.nav_bar {
+	.twoway_gradient(@colour_bg_nav, darken(@colour_bg_nav, 10%));
+	display:	block;
+	position:	fixed;
+	top:		0;
+	left:		0;
+	width:		100%;
+	z-index:	100;
+	padding:	15px 0;
+	max-height:	50px;
+	overflow:	hidden;
+	
+	ul {
+		display:	inline-block;
+		float:		left;
+		
+		&.right {
+			float:	right;
+			
+			li {
+				a {
+					margin-right:	0;
+					margin-left:	20px;
+				}
+			}
+		}
+		
+		li {
+			display:	inline-block;
+			float:		left;
+			
+			a {
+				display:		block;
+				margin-right:	20px;
+				color:			@colour_font_nav;
+				line-height:	1em;
+				
+				&:hover, &.active {
+					color:	lighten(@colour_font_nav, 50%);
+				}
+			}
+		}
+	}
+}
+
+/* --- Components --- */
+
+/*
+-	Components make up most of a website, these
+-	are prestyled "content areas" with tons of
+-	different options... (hopefully)
+*/
+
+.component {
+	
+	/*
+	-	Hero Component, this is a BIG call to action
+	*/
+	&.hero {
+		.border_radius(5px);
+		display:	block;
+		padding:	40px;
+		background:	@colour_bg_hero;
+	}
 }
