@@ -41,6 +41,7 @@
 /*
 -	Dimensions
 */
+
 @dim_width_container:		90%;
 @dim_grid_max:				12;
 @dim_push_size:				40px;
@@ -51,14 +52,6 @@
 	-moz-box-sizing: @params; -webkit-box-sizing: @params; box-sizing: @params;
 }
 
-.border_radius(@params) {
-	-moz-border-radius: @params; -webkit-border-radius: @params; border-radius: @params;
-}
-
 .box_shadow(@params) {
 	-moz-box-shadow: @params; -webkit-box-shadow: @params; box-shadow: @params;
-}
-
-.twoway_gradient(@color_1: #fff, @color_2: #eee) {
-   background-color: @color_2;  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@color_1), to(@color_2)); background-image: -webkit-linear-gradient(@color_1, @color_2); background-image: -moz-linear-gradient(@color_1, @color_2); background-image: -o-linear-gradient(@color_1, @color_2); background-image: linear-gradient(@color_1, @color_2);
 }

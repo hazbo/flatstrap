@@ -1373,9 +1373,6 @@ body span[class*=" icon-"] {
 
 }
 .component.hero {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   display: block;
   padding: 40px;
   background: #f8f8f8;
