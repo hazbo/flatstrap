@@ -1,16 +1,10 @@
 /*	------------------------------------------------------
 
-	Base.less
+	Components.less
 	
-	The master JS file.
+	Handles all the components powered by Javascript.
 	
 	Written by Joey Emery.
 	
-	Contents:
-		--- Document ready
-	
 ------------------------------------------------------ */
 
-/* ---		Document Ready		--- */
-$(document).ready(function() {
-});

@@ -1,0 +1,40 @@
+<h2>The Grid System</h2>
+<p class="push_top push_quarter">Flatstrap uses a simple 12-wide grid system, this means you can stack as many 'columns' as you want as long as they add up to 12.</p>
+
+<h4 class="push_top">Simple Example</h4>
+<p class="push_top push_quarter">Below is a very simple example of how to create a grid.</p>
+<pre class="code highlight language-html push_top push_half border_box_sizing">
+	<div class="row">
+		<div class="span3">This will span 3 "columns"</div>
+		<div class="span4">This will span 4 "columns"</div>
+		<div class="span5">This will span 5 "columns"</div>
+	</div>
+</pre>
+
+<h4 class="push_top">Multiple row example</h4>
+<p class="push_top push_quarter">What if we want to use multiple rows? No problem, it just works!</p>
+<pre class="code highlight language-html push_top push_half border_box_sizing">
+	<!-- First row -->
+	<div class="row">
+		<div class="span3">This will span 3 "columns"</div>
+		<div class="span4">This will span 4 "columns"</div>
+		<div class="span5">This will span 5 "columns"</div>
+	</div>
+	
+	<!-- Second row -->
+	<div class="row">
+		<div class="span3">This will span 3 "columns"</div>
+		<div class="span4">This will span 4 "columns"</div>
+		<div class="span5">This will span 5 "columns"</div>
+	</div>
+</pre>
+
+<h4 class="push_top">Offsetting columns</h4>
+<p class="push_top push_quarter">"What if I don't want the columns to sit directly next to each other?" I hear you ask! No problem, use the offset* class to push from the left.</p>
+<p class="push_top push_quarter">It's worth noting that all offsets count towards your 12 grid limit, so take it into account.</p>
+<pre class="code highlight language-html push_top push_half border_box_sizing">
+	<div class="row">
+		<div class="span3">This will span 3 "columns"</div>
+		<div class="span8 offset1">This will span 8 and be offset by 1 "column"</div>
+	</div>
+</pre>

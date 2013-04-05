@@ -1,0 +1,57 @@
+<h2>Sidebar</h2>
+<p class="push_top push_quarter">What's a website without a sidebar? Plus, it couldn't be easier with our built-in grid system!</p>
+
+<h4 class="push_top">Basic sidebar</h4>
+<p class="push_top push_quarter">This is your defacto basic sidebar.</p>
+<pre class="code highlight language-html push_top push_half border_box_sizing">
+	
+	<!-- Because we're relying on our grid system, we're going to put everything inside a row -->
+	<div class="row">
+	
+		<!-- 	
+			We'll also create a span4 to hold the sidebar.
+			We also add the 'component' and 'sidebar'
+			classes to it, if you don't know why check out
+			the introduction to components.
+		-->
+		<div class="span4 component sidebar">
+			<!-- Now bung in your menu items the normal way you would -->
+			<ul>
+				<li><a href="#">My link #1</a></li>
+				<li><a href="#">My link #2</a></li>
+				<li><a href="#">My link #3</a></li>
+			</ul>
+		</div>
+		
+		<!-- And a span7 offset1 to hold whatever the main website content would be -->
+		<div class="span7 offset1">
+			<h1>Main website content!</h1>
+		</div>
+	
+	</div>
+	
+</pre>
+
+<h4 class="push_top">Sidebar Groups/Titles</h4>
+<p class="push_top push_quarter">Is your sidebar getting cluttered? No worries! We'll group the items into sections by adding a title before them!</p>
+<pre class="code highlight language-html push_top push_half border_box_sizing">
+	<div class="row">
+		<div class="span4 component sidebar">
+			<ul>
+				<!-- Simply have a list item with the class of title -->
+				<li class="title">My links</li>
+				<li><a href="#">My link #1</a></li>
+				<li><a href="#">My link #2</a></li>
+				
+				<li class="title">Social</li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Github</a></li>
+			</ul>
+		</div>
+		<div class="span7 offset1">
+			<h1>Main website content!</h1>
+		</div>
+	
+	</div>
+	
+</pre>

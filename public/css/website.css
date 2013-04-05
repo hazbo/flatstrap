@@ -1,0 +1,20 @@
+#social_icons .button {
+	font-size:	2em;
+}
+
+#info_grid .span6 {
+	padding: 0 40px 0 0;
+	text-align: center;
+}
+
+#info_grid .row .span6:last-child {
+	padding: 0 0 0 40px;
+}
+
+#full_hero h1, #full_hero p {
+	text-align: center;
+}
+
+#full_hero p {
+	font-size:	1.5em;
+}

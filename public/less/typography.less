@@ -46,5 +46,31 @@ h1, h2, h3, h4 {
 p {
 	font-size:		1em;
 	line-height:	1.7em;
-	color:			lighten(@colour_font_base, 60%);
+	color:			lighten(@colour_font_base, 50%);
+	
+	&.justify {
+		text-align:	justify;
+	}
+	
+	&.center {
+		text-align: center;
+	}
+}
+
+/* --- Type sizing --- */
+
+.font_size_small {
+	font-size: 0.5em;
+}
+
+.font_size_normal {
+	font-size: 1em;
+}
+
+.font_size_medium {
+	font-size: 	1.5em;
+}
+
+.font_size_large {
+	font-size:	2em;
 }
