@@ -1,0 +1,114 @@
+/*	------------------------------------------------------
+
+	Structure.less
+	
+	- Simple responsive grid/column system.
+	- Push margin system.
+	
+	Written by Joey Emery.
+	
+------------------------------------------------------ */
+
+/* --- Grid --- */
+
+@dim_grid_item_width:	100% / @dim_grid_max;
+
+.row {
+	.clearfix;
+	display:	block;
+	zoom:		1;
+	
+	.span_loop (@index) when (@index > 0) {
+
+		(~".span@{index}") {
+			.box_sizing(border-box);
+			width:			@dim_grid_item_width * @index;
+			display:		inline-block;
+			float:			left;
+			overflow: 		hidden;
+		}
+		
+		.span_loop(@index - 1);
+	}
+	
+	.span_loop (0) {}
+	.span_loop (@dim_grid_max);
+	
+	.offset_loop (@index) when (@index > 0) {
+		
+		(~".offset@{index}") {
+			margin-left:	@dim_grid_item_width * @index;
+		}
+		
+		.offset_loop(@index - 1);
+	}
+	
+	.offset_loop(0) {}
+	.offset_loop(@dim_grid_max);
+}
+
+/* --- Push --- */
+
+.push_top {
+	margin-top:	@dim_push_size;
+	
+	&.push_double {
+		margin-top:	(@dim_push_size * 2);
+	}
+	
+	&.push_half {
+		margin-top: (@dim_push_size / 2);
+	}
+	
+	&.push_quarter {
+		margin-top:	(@dim_push_size / 4);
+	}
+}
+
+.push_bottom {
+	margin-bottom:	@dim_push_size;
+	
+	&.push_double {
+		margin-bottom:	(@dim_push_size * 2);
+	}
+	
+	&.push_half {
+		margin-bottom:	(@dim_push_size / 2);
+	}
+	
+	&.push_quarter {
+		margin-bottom:	(@dim_push_size / 4);
+	}
+}
+
+.push_left {
+	margin-left:	@dim_push_size;
+	
+	&.push_double {
+		margin-left:	(@dim_push_size * 2);
+	}
+	
+	&.push_half {
+		margin-left:	(@dim_push_size / 2);
+	}
+	
+	&.push_quarter {
+		margin-left:	(@dim_push_size / 4);
+	}
+}
+
+.push_right {
+	margin-right:	@dim_push_size;
+	
+	&.push_double {
+		margin-right:	(@dim_push_size * 2);
+	}
+	
+	&.push_half {
+		margin-right:	(@dim_push_size / 2);
+	}
+	
+	&.push_quarter {
+		margin-right:	(@dim_push_size / 4);
+	}
+}

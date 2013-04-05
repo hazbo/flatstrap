@@ -40,11 +40,11 @@
 @import 'typography';
 
 /*
--	Load in the grid file, which powers
--	our entire grid system.
+-	Load in the structure file, which powers
+-	all structural systems (grid/push/etc).
 */
 
-@import 'grid';
+@import 'structure';
 
 /* --- Generic Styles --- */
 
@@ -74,6 +74,10 @@ body {
 		width:		@dim_width_container;
 		margin:		0 auto;
 	}
+	
+	span[class^="icon-"], span[class*=" icon-"] {
+		display:	inline-block;
+	}
 }
 
 /* --- Navigation --- */
@@ -84,7 +88,7 @@ body {
 */
 
 .nav_bar {
-	.twoway_gradient(@colour_bg_nav, darken(@colour_bg_nav, 10%));
+	background:	@colour_bg_nav;
 	display:	block;
 	position:	fixed;
 	top:		0;
@@ -128,6 +132,45 @@ body {
 	}
 }
 
+/* --- Elements --- */
+
+/*
+-	A nice little button, web 3.0 and shizz.
+-	WEBSCALE.
+*/
+
+.button {
+	background:		@colour_bg_button;
+	display:		inline-block;
+	padding:		10px 20px;
+	color:			darken(@colour_bg_button, 40%);
+	font-size:		1em;
+	line-height:	1em;
+	
+	&:hover {
+		background:		darken(@colour_bg_button, 3%);
+	}
+	
+	&.primary {
+		background:		@colour_font_anchor;
+		color:			lighten(@colour_font_anchor, 70%);
+		
+		&:hover {
+			background: darken(@colour_font_anchor, 5%);
+		}
+	}
+	
+	&.medium {
+		font-size:		1.5em;
+		padding:		15px 30px;
+	}
+	
+	&.large {
+		font-size: 		2em;
+		padding:		20px 40px;
+	}
+}
+
 /* --- Components --- */
 
 /*
@@ -137,6 +180,7 @@ body {
 */
 
 .component {
+	.box_sizing(border-box);
 	
 	/*
 	-	Hero Component, this is a BIG call to action
@@ -146,5 +190,37 @@ body {
 		display:	block;
 		padding:	40px;
 		background:	@colour_bg_hero;
+	}
+	
+	/*
+	-	Sidebar component for lovely styled sidebars!
+	*/
+	&.sidebar {
+		background:	@colour_bg_sidebar;
+		
+		ul {
+			display:	block;
+			
+			li {
+				display:	block;
+				
+				&.title {
+					color:			darken(@colour_bg_sidebar, 60%);
+					text-transform: uppercase;
+					padding:		10px 15px;
+				}
+				
+				a {
+					display:	block;
+					padding:	10px 15px;
+					color:		darken(@colour_bg_sidebar, 40%);
+					
+					&:hover {
+						background:	@colour_font_anchor;
+						color:		@colour_font_sidebar_hover;
+					}
+				}
+			}
+		}
 	}
 }
